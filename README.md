@@ -1,6 +1,6 @@
-# Webpack Frontend Starterkit
+# 3D CSS Gallery
 
-A lightweight foundation for your next webpack based frontend project.
+A demo of a CSS based 3D rendering engine in a gallery setting using the paintings of Anaya Meldrum.
 
 
 ### Installation
