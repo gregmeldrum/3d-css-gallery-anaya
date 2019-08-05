@@ -276,7 +276,6 @@ body {
 .floor {
   width: 600px;
   height: 500px;
-  background-image: url("/build/public/lightwoodfloor.jpg");
   background-size: 100px 100px;
   opacity: 1; }
 
