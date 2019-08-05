@@ -469,7 +469,7 @@ $picture-right-5-height: 160px;
 .floor {
   width: $main-wall-length;
   height: $side-wall-length;
-  background-image: url('/public/lightwoodfloor.jpg');
+  background-image: url('lightwoodfloor.jpg');
   background-size: 100px 100px;
   opacity: $room-opacity;
 }
