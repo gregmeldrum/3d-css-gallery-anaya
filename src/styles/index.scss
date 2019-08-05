@@ -1,0 +1,589 @@
+$body-color: #333333;
+$wall-height: 100px;
+$side-wall-length: 500px;
+$main-wall-length: 600px;
+$wall-color: #DAD5D3;
+$room-opacity: 1;
+
+body {
+  background-color: $body-color;
+}
+
+.container {
+  width: 800px;
+  height: 400px;
+  margin: auto;
+  top: 0px;
+  left: 0px;
+  float: left;
+  perspective: 700px;
+  border: 5px solid #777777;
+  margin: 0px;
+  transform-style: preserve-3d;
+  overflow: hidden;
+  user-select: none;
+}
+
+#fixer {
+  top: 0px;
+  left: 0px;
+  margin: 0px;
+  width: 100%;
+  height: 100%;
+  transform: translateY(-150px) translateZ(600px) translateZ(100px);
+  position: absolute;
+  transform-style: preserve-3d;
+  transform-origin: 50% 100%;
+}
+
+#viewpoint {
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transform-style: preserve-3d;
+  transform-origin: 50% 100%;
+  margin: 0;
+}
+
+#scene {
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transform-style: preserve-3d;
+  margin: 0;
+}
+
+.object {
+  margin: 0;
+  padding: 0;
+  position:absolute;
+  transform-origin: 0% 0%;
+  top: 0px;
+  left: 0px; 
+  display: block;
+}
+
+$shadow-width: 60px;
+$shadow-height: 70px;
+$spotlight-width: 3px;
+
+.spotlight-halo {
+  background-color: #FFFFFF;
+  border-radius: 25px;
+  width: $shadow-width;
+  height: $shadow-height;
+  box-shadow: 0 0 6px 3px #fff;
+  opacity: .13;
+}
+
+.spotlight {
+  background-color: #FFFFFF;
+  border-radius: 1px;
+  width: 4px;
+  height: 4px;
+  box-shadow: 0 0 2px 1px #fff;
+}
+
+.picture {
+  background-color: #BBBBBB;
+  color: #404040;
+  height: auto;
+  border: 3px solid #222222;
+  width: 200px;
+  box-shadow: -1px 3px 4px 1px #888888;
+
+}
+
+$scale-factor: .25;
+
+/* 
+ *  Front wall pictures
+ */
+@function front-wall-pic($height, $width, $position, $scale: $scale-factor) {
+  @return (
+    transform: scale3d($scale, $scale, $scale) rotateX(-90deg) translateY(-270px + (140px - $height)/2) translateZ(5px) translateX($position / $scale - ($width/2)),
+    width: $width,
+    height: $height
+  );
+}
+
+$picture-front-1-position: 75px;
+$picture-front-1-width: 200px;
+$picture-front-1-height: 203px;
+
+#picture-front-1 {
+  $pic-map : front-wall-pic($picture-front-1-height, $picture-front-1-width, $picture-front-1-position);
+  @each $key, $value in $pic-map {
+    #{$key}: $value;
+  }
+}
+
+#spotlight-front-1 {
+  transform: translateZ($wall-height) translateX($picture-front-1-position - 0.5*$spotlight-width) translateY(40px);
+}
+
+#spotlight-halo-front-1 {
+  transform: rotateX(-90deg) translateY(-$shadow-height - 13px) translateX($picture-front-1-position - 0.5*$shadow-width) translateZ(1px);
+}
+
+
+// Picture 2
+$picture-front-2-position: 160px;
+$picture-front-2-width: 206px;
+$picture-front-2-height: 152px;
+
+#picture-front-2 {
+  $pic-2 : front-wall-pic($picture-front-2-height, $picture-front-2-width, $picture-front-2-position);
+  width: map-get($pic-2, width);
+  transform: map-get($pic-2, transform);
+}
+
+#spotlight-front-2 {
+  transform: translateZ($wall-height) translateX($picture-front-2-position - 0.5*$spotlight-width) translateY(40px);
+}
+
+#spotlight-halo-front-2 {
+  transform: rotateX(-90deg) translateY(-$shadow-height - 13px) translateX($picture-front-2-position - 0.5*$shadow-width) translateZ(1px);
+}
+
+// Picture 3
+$picture-front-3-position: 245px;
+$picture-front-3-width: 160px;
+$picture-front-3-height: 200px;
+
+#picture-front-3 {
+  $pic-3 : front-wall-pic($picture-front-3-height, $picture-front-3-width, $picture-front-3-position);
+  width: map-get($pic-3, width);
+  transform: map-get($pic-3, transform);
+}
+
+#spotlight-front-3 {
+  transform: translateZ($wall-height) translateX($picture-front-3-position - 0.5*$spotlight-width) translateY(40px);
+}
+
+#spotlight-halo-front-3 {
+  transform: rotateX(-90deg) translateY(-$shadow-height - 13px) translateX($picture-front-3-position - 0.5*$shadow-width) translateZ(1px);
+}
+
+// Picture 4
+$picture-front-4-position: 330px;
+$picture-front-4-width: 206px;
+$picture-front-4-height: 140px;
+
+#picture-front-4 {
+  $pic-4 : front-wall-pic($picture-front-4-height, $picture-front-4-width, $picture-front-4-position);
+  width: map-get($pic-4, width);
+  transform: map-get($pic-4, transform);
+}
+
+#spotlight-front-4 {
+  transform: translateZ($wall-height) translateX($picture-front-4-position - 0.5*$spotlight-width) translateY(40px);
+}
+
+#spotlight-halo-front-4 {
+  transform: rotateX(-90deg) translateY(-$shadow-height - 13px) translateX($picture-front-4-position - 0.5*$shadow-width) translateZ(1px);
+}
+
+// Picture 5
+$picture-front-5-position: 415px;
+$picture-front-5-width: 155px;
+$picture-front-5-height: 200px;
+
+#picture-front-5 {
+  $pic-5 : front-wall-pic($picture-front-5-height, $picture-front-5-width, $picture-front-5-position);
+  width: map-get($pic-5, width);
+  transform: map-get($pic-5, transform);
+}
+
+#spotlight-front-5 {
+  transform: translateZ($wall-height) translateX($picture-front-5-position - 0.5*$spotlight-width) translateY(40px);
+}
+
+#spotlight-halo-front-5 {
+  transform: rotateX(-90deg) translateY(-$shadow-height - 13px) translateX($picture-front-5-position - 0.5*$shadow-width) translateZ(1px);
+}
+
+// Picture 6
+$picture-front-6-position: 500px;
+$picture-front-6-width: 155px;
+$picture-front-6-height: 200px;
+
+#picture-front-6 {
+  $pic-6 : front-wall-pic($picture-front-6-height, $picture-front-6-width, $picture-front-6-position);
+  width: map-get($pic-6, width);
+  transform: map-get($pic-6, transform);
+}
+
+#spotlight-front-6 {
+  transform: translateZ($wall-height) translateX($picture-front-6-position - 0.5*$spotlight-width) translateY(40px);
+}
+
+#spotlight-halo-front-6 {
+  transform: rotateX(-90deg) translateY(-$shadow-height - 13px) translateX($picture-front-6-position - 0.5*$shadow-width) translateZ(1px);
+}
+
+/*
+ Left wall pictures
+  */
+
+@function left-wall-pic($height, $width, $position, $scale: $scale-factor) {
+  @return (
+    transform: scale3d($scale-factor, $scale-factor, $scale-factor) rotateX(-90deg) rotateY(90deg) translateY(-270px + (140px - $height)/2) translateX(-$width/2 - ($position/$scale-factor)) translateZ(3px),
+    width: $width,
+    height: $height
+  );
+}
+  
+$picture-left-1-position: 70px;
+$picture-left-1-width: 118px;
+$picture-left-1-height: 120px;
+
+#picture-left-1 {
+  $pic-map : left-wall-pic($picture-left-1-height, $picture-left-1-width, $picture-left-1-position);
+  @each $key, $value in $pic-map {
+    #{$key}: $value;
+  }
+}
+
+#spotlight-left-1 {
+  transform: translateZ($wall-height) translateY($picture-left-1-position - 0.5*$spotlight-width) translateX(40px);
+}
+
+#spotlight-halo-left-1 {
+  transform: rotateX(-90deg) translateY(-$shadow-height - 13px) rotateY(90deg) translateX(-$picture-left-1-position - 0.5*$shadow-width) translateZ(1px);
+}
+
+$picture-left-2-position: 140px;
+$picture-left-2-width: 122px;
+$picture-left-2-height: 180px;
+
+#picture-left-2 {
+  $pic-map : left-wall-pic($picture-left-2-height, $picture-left-2-width, $picture-left-2-position);
+  @each $key, $value in $pic-map {
+    #{$key}: $value;
+  }
+}
+
+#spotlight-left-2 {
+  transform: translateZ($wall-height) translateY($picture-left-2-position - 0.5*$spotlight-width) translateX(40px);
+}
+
+#spotlight-halo-left-2 {
+  transform: rotateX(-90deg) translateY(-$shadow-height - 13px) rotateY(90deg) translateX(-$picture-left-2-position - 0.5*$shadow-width) translateZ(1px);
+}
+
+$picture-left-3-position: 210px;
+$picture-left-3-width: 232px;
+$picture-left-3-height: 180px;
+
+#picture-left-3 {
+  $pic-map : left-wall-pic($picture-left-3-height, $picture-left-3-width, $picture-left-3-position);
+  @each $key, $value in $pic-map {
+    #{$key}: $value;
+  }
+}
+
+#spotlight-left-3 {
+  transform: translateZ($wall-height) translateY($picture-left-3-position - 0.5*$spotlight-width) translateX(40px);
+}
+
+#spotlight-halo-left-3 {
+  transform: rotateX(-90deg) translateY(-$shadow-height - 13px) rotateY(90deg) translateX(-$picture-left-3-position - 0.5*$shadow-width) translateZ(1px);
+}
+
+$picture-left-4-position: 280px;
+$picture-left-4-width: 146px;
+$picture-left-4-height: 180px;
+
+#picture-left-4 {
+  $pic-map : left-wall-pic($picture-left-4-height, $picture-left-4-width, $picture-left-4-position);
+  @each $key, $value in $pic-map {
+    #{$key}: $value;
+  }
+}
+
+#spotlight-left-4 {
+  transform: translateZ($wall-height) translateY($picture-left-4-position - 0.5*$spotlight-width) translateX(40px);
+}
+
+#spotlight-halo-left-4 {
+  transform: rotateX(-90deg) translateY(-$shadow-height - 13px) rotateY(90deg) translateX(-$picture-left-4-position - 0.5*$shadow-width) translateZ(1px);
+}
+
+$picture-left-5-position: 360px;
+$picture-left-5-width: 128px;
+$picture-left-5-height: 180px;
+
+#picture-left-5 {
+  $pic-map : left-wall-pic($picture-left-5-height, $picture-left-5-width, $picture-left-5-position);
+  @each $key, $value in $pic-map {
+    #{$key}: $value;
+  }
+}
+
+#spotlight-left-5 {
+  transform: translateZ($wall-height) translateY($picture-left-5-position - 0.5*$spotlight-width) translateX(40px);
+}
+
+#spotlight-halo-left-5 {
+  transform: rotateX(-90deg) translateY(-$shadow-height - 13px) rotateY(90deg) translateX(-$picture-left-5-position - 0.5*$shadow-width) translateZ(1px);
+}
+
+$picture-left-6-position: 440px;
+$picture-left-6-width: 149px;
+$picture-left-6-height: 190px;
+
+#picture-left-6 {
+  $pic-map : left-wall-pic($picture-left-6-height, $picture-left-6-width, $picture-left-6-position);
+  @each $key, $value in $pic-map {
+    #{$key}: $value;
+  }
+}
+
+#spotlight-left-6 {
+  transform: translateZ($wall-height) translateY($picture-left-6-position - 0.5*$spotlight-width) translateX(40px);
+}
+
+#spotlight-halo-left-6 {
+  transform: rotateX(-90deg) translateY(-$shadow-height - 13px) rotateY(90deg) translateX(-$picture-left-6-position - 0.5*$shadow-width) translateZ(1px);
+}
+
+@function right-wall-pic($height, $width, $position, $scale: $scale-factor) {
+  @return (
+    transform: scale3d($scale-factor, $scale-factor, $scale-factor) rotateX(-90deg) rotateY(90deg) translateZ(($main-wall-length - 2)/$scale-factor) translateY(-270px + (140px - $height)/2) translateX(-$position/$scale-factor + 0.5*$width) rotateY(180deg),
+    width: $width,
+    height: $height
+  );
+} 
+
+//transform: scale3d($scale-factor, $scale-factor, $scale-factor) rotateX(-90deg) rotateY(90deg) translateZ(($main-wall-length - 2)/$scale-factor) translateY(-270px + (140px - $height)/2) translateX(-$position/$scale-factor - 0.5*$width + (200px - (200px - $width))) rotateY(180deg),
+
+/* Right wall pictures */
+$picture-right-1-position: 70px;
+$picture-right-1-width: 206px;
+$picture-right-1-height: 140px;
+
+#picture-right-1 {
+  $pic-map : right-wall-pic($picture-right-1-height, $picture-right-1-width, $picture-right-1-position);
+  @each $key, $value in $pic-map {
+    #{$key}: $value;
+  }
+}
+
+#spotlight-right-1 {
+  transform: translateZ($wall-height) translateY($picture-right-1-position - 0.5*$spotlight-width) translateX($main-wall-length - 40px);
+}
+
+#spotlight-halo-right-1 {
+  transform: rotateX(-90deg) rotateY(90deg) translateZ($main-wall-length - 5px) translateY(-$shadow-height - 13px) translateX(-$picture-right-1-position - 0.5*$shadow-width);
+}
+
+$picture-right-2-position: 150px;
+$picture-right-2-width: 132px;
+$picture-right-2-height: 180px;
+
+#picture-right-2 {
+  $pic-map : right-wall-pic($picture-right-2-height, $picture-right-2-width, $picture-right-2-position);
+  @each $key, $value in $pic-map {
+    #{$key}: $value;
+  }
+}
+
+#spotlight-right-2 {
+  transform: translateZ($wall-height) translateY($picture-right-2-position - 0.5*$spotlight-width) translateX($main-wall-length - 40px);
+}
+
+#spotlight-halo-right-2 {
+  transform: rotateX(-90deg) rotateY(90deg) translateZ($main-wall-length - 5px) translateY(-$shadow-height - 13px) translateX(-$picture-right-2-position - 0.5*$shadow-width);
+}
+
+$picture-right-3-position: 230px;
+$picture-right-3-width: 274px;
+$picture-right-3-height: 140px;
+
+#picture-right-3 {
+  $pic-map : right-wall-pic($picture-right-3-height, $picture-right-3-width, $picture-right-3-position);
+  @each $key, $value in $pic-map {
+    #{$key}: $value;
+  }
+}
+
+#spotlight-right-3 {
+  transform: translateZ($wall-height) translateY($picture-right-3-position - 0.5*$spotlight-width) translateX($main-wall-length - 40px);
+}
+
+#spotlight-halo-right-3 {
+  transform: rotateX(-90deg) rotateY(90deg) translateZ($main-wall-length - 5px) translateY(-$shadow-height - 13px) translateX(-$picture-right-3-position - 0.5*$shadow-width);
+}
+
+$picture-right-4-position: 320px;
+$picture-right-4-width: 200px;
+$picture-right-4-height: 160px;
+
+#picture-right-4 {
+  $pic-map : right-wall-pic($picture-right-4-height, $picture-right-4-width, $picture-right-4-position);
+  @each $key, $value in $pic-map {
+    #{$key}: $value;
+  }
+}
+
+#spotlight-right-4 {
+  transform: translateZ($wall-height) translateY($picture-right-4-position - 0.5*$spotlight-width) translateX($main-wall-length - 40px);
+}
+
+#spotlight-halo-right-4 {
+  transform: rotateX(-90deg) rotateY(90deg) translateZ($main-wall-length - 5px) translateY(-$shadow-height - 13px) translateX(-$picture-right-4-position - 0.5*$shadow-width);
+}
+
+$picture-right-5-position: 410px;
+$picture-right-5-width: 200px;
+$picture-right-5-height: 160px;
+
+#picture-right-5 {
+  $pic-map : right-wall-pic($picture-right-5-height, $picture-right-5-width, $picture-right-5-position);
+  @each $key, $value in $pic-map {
+    #{$key}: $value;
+  }
+}
+
+#spotlight-right-5 {
+  transform: translateZ($wall-height) translateY($picture-right-5-position - 0.5*$spotlight-width) translateX($main-wall-length - 40px);
+}
+
+#spotlight-halo-right-5 {
+  transform: rotateX(-90deg) rotateY(90deg) translateZ($main-wall-length - 5px) translateY(-$shadow-height - 13px) translateX(-$picture-right-5-position - 0.5*$shadow-width);
+}
+
+.ceiling {
+  width: $main-wall-length;
+  height: $side-wall-length;
+  transform: translateZ($wall-height);
+  background-color: rgb(218, 213, 211);
+  opacity: $room-opacity
+}
+
+.floor {
+  width: $main-wall-length;
+  height: $side-wall-length;
+  background-image: url('/public/lightwoodfloor.jpg');
+  background-size: 100px 100px;
+  opacity: $room-opacity;
+}
+
+.wall {
+  background-image: linear-gradient(darken($wall-color, 13), $wall-color, $wall-color, darken($wall-color, 5));
+  opacity: $room-opacity;
+  position: absolute;
+}
+
+.front-wall {
+  width: $main-wall-length;
+  height: $wall-height;
+  transform: rotateX(-90deg) translateY(-$wall-height);
+}
+
+$window-width: 50px;
+$window-height: 70px;
+
+.back-wall-left {
+  width: $main-wall-length/3 - $window-width *.5;
+  height: $wall-height;
+  transform: rotateX(-90deg) translateY(-$wall-height) translateZ($side-wall-length) translateX($main-wall-length*2/3 + 0.5*$window-width + 1px);
+}
+
+.back-wall-right {
+  width: $main-wall-length/3 - $window-width *.5;
+  height: $wall-height;
+  transform: rotateX(-90deg) translateY(-$wall-height) translateZ($side-wall-length) translateX(-1px);
+}
+
+.back-wall-middle {
+  width: $main-wall-length/3 - $window-width -1px;
+  height: $wall-height;
+  transform: rotateX(-90deg) translateY(-$wall-height) translateZ($side-wall-length) translateX($main-wall-length*1/3 + 0.5*$window-width + 1px);
+}
+
+.back-wall-top {
+  background-image: linear-gradient(darken($wall-color, 13), darken($wall-color, 7));
+  width: $main-wall-length;
+  height: ($wall-height - $window-height)/2;
+  transform: rotateX(-90deg) translateY(-$wall-height - 1px) translateZ($side-wall-length);
+}
+
+.back-wall-bottom {
+  background-image: linear-gradient(darken($wall-color, 2), darken($wall-color, 6));
+  width: $main-wall-length;
+  height: ($wall-height - $window-height)/2;
+  transform: rotateX(-90deg) translateY((-$wall-height + $window-height)/2 + 1px) translateZ($side-wall-length);
+}
+
+.left-wall {
+  width: $wall-height;
+  height: $side-wall-length;
+  transform: rotateY(-90deg);
+  background-image: linear-gradient(to right, darken($wall-color, 11), darken($wall-color, 6), darken($wall-color, 6), darken($wall-color, 17));
+}
+
+.right-wall {
+  width: $wall-height;
+  height: $side-wall-length;
+  transform: rotateY(-90deg) translateZ(-$main-wall-length);
+  background-image: linear-gradient(to right, darken($wall-color, 11), darken($wall-color, 6), darken($wall-color, 6), darken($wall-color, 17));
+}
+
+$window-border: 3px;
+
+.window {
+  width: $window-width;
+  height: $window-height;
+  border: $window-border solid #FFFFFF;
+  opacity: .7;
+  background-color: #FFFFFF66;
+}
+
+.left-window {
+  transform: rotateX(-90deg) translateY(-$wall-height + .5*($wall-height - $window-height) - $window-border) translateZ($side-wall-length - 1px) translateX($main-wall-length*2/3 - $window-width*.5 - $window-border);  
+}
+
+.right-window {
+  transform: rotateX(-90deg) translateY(-$wall-height + .5*($wall-height - $window-height) - $window-border) translateZ($side-wall-length - 1px) translateX($main-wall-length*1/3 - $window-width*.5 - $window-border);  
+}
+
+.outside {
+  width: 3000px;
+  transform: rotateX(90deg) rotateY(180deg) rotateZ(180deg) translateY(-$wall-height - 240px) translateZ($side-wall-length + 500px) translateX(-1000px);
+}
+
+$caption-scale: 0.12;
+
+.caption-author {
+  font-family: 'Nunito', sans-serif;
+  font-size: 10px;
+}
+
+.caption-title {
+  font-family: 'Nunito', sans-serif;
+  font-size: 12px;
+  font-style: italic;
+}
+
+.caption-description {
+  font-family: 'Nunito', sans-serif;
+  font-size: 8px;
+}
+
+#caption-front-1 {
+  transform: rotateX(-90deg) translateY(-40px) translateX($picture-front-1-position + $scale-factor*$picture-front-1-width/2 + 2px) translateZ(1px) scale3d($caption-scale, $caption-scale, $caption-scale);
+}
+
+#caption-front-2 {
+  transform: rotateX(-90deg) translateY(-40px) translateX($picture-front-2-position + $scale-factor*$picture-front-2-width/2 + 2px) translateZ(1px) scale3d($caption-scale, $caption-scale, $caption-scale);
+}
+
+#caption-front-3 {
+  transform: rotateX(-90deg) translateY(-40px) translateX($picture-front-3-position + $scale-factor*$picture-front-3-width/2 + 2px) translateZ(1px) scale3d($caption-scale, $caption-scale, $caption-scale);
+}
