@@ -13,7 +13,8 @@ body {
   perspective: 700px;
   border: 5px solid #777777;
   overflow: hidden;
-  user-select: none; }
+  user-select: none;
+  background-color: #E4F3FF; }
 
 #fixer {
   top: 0px;
@@ -343,7 +344,7 @@ body {
 
 .outside {
   width: 3000px;
-  transform: rotateX(90deg) rotateY(180deg) rotateZ(180deg) translateY(-340px) translateZ(1000px) translateX(-1000px); }
+  transform: rotateX(90deg) rotateY(180deg) rotateZ(180deg) translateY(-320px) translateZ(1000px) translateX(-1000px); }
 
 .caption-author {
   font-family: 'Nunito', sans-serif;

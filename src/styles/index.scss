@@ -25,6 +25,7 @@ body {
   //transform-style: preserve-3d;
   overflow: hidden;
   user-select: none;
+  background-color: #E4F3FF
 }
 
 #fixer {
@@ -558,7 +559,7 @@ $window-border: 3px;
 
 .outside {
   width: 3000px;
-  transform: rotateX(90deg) rotateY(180deg) rotateZ(180deg) translateY(-$wall-height - 240px) translateZ($side-wall-length + 500px) translateX(-1000px);
+  transform: rotateX(90deg) rotateY(180deg) rotateZ(180deg) translateY(-$wall-height - 220px) translateZ($side-wall-length + 500px) translateX(-1000px);
 }
 
 $caption-scale: 0.12;

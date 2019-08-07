@@ -96,10 +96,10 @@ var position = (function () {
     setPosition(50, 300);
 
     function checkBounds(){
-        if (prevTop < 0) {
-            prevTop = 0;
-        } else if (prevTop > 300) {
-            prevTop = 300;
+        if (prevTop < -10) {
+            prevTop = -10;
+        } else if (prevTop > 310) {
+            prevTop = 310;
         }
 
         if (prevLeft < -120) {
