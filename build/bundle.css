@@ -93,17 +93,17 @@ body {
 
 #picture-front-2 {
   width: 206px;
-  transform: scale3d(0.25, 0.25, 0.25) rotateX(-90deg) translateY(-276px) translateZ(5px) translateX(537px); }
+  transform: scale3d(0.25, 0.25, 0.25) rotateX(-90deg) translateY(-270px) translateZ(5px) translateX(557px); }
 
 #spotlight-front-2 {
-  transform: translateZ(100px) translateX(158.5px) translateY(40px); }
+  transform: translateZ(100px) translateX(163.5px) translateY(40px); }
 
 #spotlight-halo-front-2 {
-  transform: rotateX(-90deg) translateY(-83px) translateX(130px) translateZ(1px); }
+  transform: rotateX(-90deg) translateY(-83px) translateX(135px) translateZ(1px); }
 
 #picture-front-3 {
-  width: 160px;
-  transform: scale3d(0.25, 0.25, 0.25) rotateX(-90deg) translateY(-300px) translateZ(5px) translateX(900px); }
+  width: 132px;
+  transform: scale3d(0.25, 0.25, 0.25) rotateX(-90deg) translateY(-280px) translateZ(5px) translateX(914px); }
 
 #spotlight-front-3 {
   transform: translateZ(100px) translateX(243.5px) translateY(40px); }
@@ -212,59 +212,59 @@ body {
 
 /* Right wall pictures */
 #picture-right-1 {
-  transform: scale3d(0.25, 0.25, 0.25) rotateX(-90deg) rotateY(90deg) translateZ(2392px) translateY(-270px) translateX(-177px) rotateY(180deg);
-  width: 206px;
-  height: 140px; }
-
-#spotlight-right-1 {
-  transform: translateZ(100px) translateY(68.5px) translateX(560px); }
-
-#spotlight-halo-right-1 {
-  transform: rotateX(-90deg) rotateY(90deg) translateZ(595px) translateY(-83px) translateX(-100px); }
-
-#picture-right-2 {
-  transform: scale3d(0.25, 0.25, 0.25) rotateX(-90deg) rotateY(90deg) translateZ(2392px) translateY(-290px) translateX(-534px) rotateY(180deg);
-  width: 132px;
-  height: 180px; }
-
-#spotlight-right-2 {
-  transform: translateZ(100px) translateY(148.5px) translateX(560px); }
-
-#spotlight-halo-right-2 {
-  transform: rotateX(-90deg) rotateY(90deg) translateZ(595px) translateY(-83px) translateX(-180px); }
-
-#picture-right-3 {
-  transform: scale3d(0.25, 0.25, 0.25) rotateX(-90deg) rotateY(90deg) translateZ(2392px) translateY(-270px) translateX(-783px) rotateY(180deg);
+  transform: scale3d(0.25, 0.25, 0.25) rotateX(-90deg) rotateY(90deg) translateZ(2392px) translateY(-270px) translateX(-183px) rotateY(180deg);
   width: 274px;
   height: 140px; }
 
-#spotlight-right-3 {
-  transform: translateZ(100px) translateY(228.5px) translateX(560px); }
+#spotlight-right-1 {
+  transform: translateZ(100px) translateY(78.5px) translateX(560px); }
 
-#spotlight-halo-right-3 {
-  transform: rotateX(-90deg) rotateY(90deg) translateZ(595px) translateY(-83px) translateX(-260px); }
+#spotlight-halo-right-1 {
+  transform: rotateX(-90deg) rotateY(90deg) translateZ(595px) translateY(-83px) translateX(-110px); }
 
-#picture-right-4 {
-  transform: scale3d(0.25, 0.25, 0.25) rotateX(-90deg) rotateY(90deg) translateZ(2392px) translateY(-280px) translateX(-1180px) rotateY(180deg);
+#picture-right-2 {
+  transform: scale3d(0.25, 0.25, 0.25) rotateX(-90deg) rotateY(90deg) translateZ(2392px) translateY(-280px) translateX(-600px) rotateY(180deg);
   width: 200px;
   height: 160px; }
 
+#spotlight-right-2 {
+  transform: translateZ(100px) translateY(173.5px) translateX(560px); }
+
+#spotlight-halo-right-2 {
+  transform: rotateX(-90deg) rotateY(90deg) translateZ(595px) translateY(-83px) translateX(-205px); }
+
+#picture-right-3 {
+  transform: scale3d(0.25, 0.25, 0.25) rotateX(-90deg) rotateY(90deg) translateZ(2392px) translateY(-276px) translateX(-937px) rotateY(180deg);
+  width: 206px;
+  height: 152px; }
+
+#spotlight-right-3 {
+  transform: translateZ(100px) translateY(258.5px) translateX(560px); }
+
+#spotlight-halo-right-3 {
+  transform: rotateX(-90deg) rotateY(90deg) translateZ(595px) translateY(-83px) translateX(-290px); }
+
+#picture-right-4 {
+  transform: scale3d(0.25, 0.25, 0.25) rotateX(-90deg) rotateY(90deg) translateZ(2392px) translateY(-300px) translateX(-1300px) rotateY(180deg);
+  width: 160px;
+  height: 200px; }
+
 #spotlight-right-4 {
-  transform: translateZ(100px) translateY(318.5px) translateX(560px); }
+  transform: translateZ(100px) translateY(343.5px) translateX(560px); }
 
 #spotlight-halo-right-4 {
-  transform: rotateX(-90deg) rotateY(90deg) translateZ(595px) translateY(-83px) translateX(-350px); }
+  transform: rotateX(-90deg) rotateY(90deg) translateZ(595px) translateY(-83px) translateX(-375px); }
 
 #picture-right-5 {
-  transform: scale3d(0.25, 0.25, 0.25) rotateX(-90deg) rotateY(90deg) translateZ(2392px) translateY(-280px) translateX(-1540px) rotateY(180deg);
+  transform: scale3d(0.25, 0.25, 0.25) rotateX(-90deg) rotateY(90deg) translateZ(2392px) translateY(-280px) translateX(-1620px) rotateY(180deg);
   width: 200px;
   height: 160px; }
 
 #spotlight-right-5 {
-  transform: translateZ(100px) translateY(408.5px) translateX(560px); }
+  transform: translateZ(100px) translateY(428.5px) translateX(560px); }
 
 #spotlight-halo-right-5 {
-  transform: rotateX(-90deg) rotateY(90deg) translateZ(595px) translateY(-83px) translateX(-440px); }
+  transform: rotateX(-90deg) rotateY(90deg) translateZ(595px) translateY(-83px) translateX(-460px); }
 
 .ceiling {
   width: 600px;
@@ -362,10 +362,10 @@ body {
   transform: rotateX(-90deg) translateY(-40px) translateX(102px) translateZ(1px) scale3d(0.12, 0.12, 0.12); }
 
 #caption-front-2 {
-  transform: rotateX(-90deg) translateY(-40px) translateX(187.75px) translateZ(1px) scale3d(0.12, 0.12, 0.12); }
+  transform: rotateX(-90deg) translateY(-40px) translateX(192.75px) translateZ(1px) scale3d(0.12, 0.12, 0.12); }
 
 #caption-front-3 {
-  transform: rotateX(-90deg) translateY(-40px) translateX(267px) translateZ(1px) scale3d(0.12, 0.12, 0.12); }
+  transform: rotateX(-90deg) translateY(-40px) translateX(263.5px) translateZ(1px) scale3d(0.12, 0.12, 0.12); }
 
 
 /*# sourceMappingURL=bundle.css.map*/

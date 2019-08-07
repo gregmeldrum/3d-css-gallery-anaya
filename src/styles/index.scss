@@ -135,9 +135,9 @@ $picture-front-1-height: 203px;
 
 
 // Picture 2
-$picture-front-2-position: 160px;
+$picture-front-2-position: 165px;
 $picture-front-2-width: 206px;
-$picture-front-2-height: 152px;
+$picture-front-2-height: 140px;
 
 #picture-front-2 {
   $pic-2 : front-wall-pic($picture-front-2-height, $picture-front-2-width, $picture-front-2-position);
@@ -155,8 +155,8 @@ $picture-front-2-height: 152px;
 
 // Picture 3
 $picture-front-3-position: 245px;
-$picture-front-3-width: 160px;
-$picture-front-3-height: 200px;
+$picture-front-3-width: 132px;
+$picture-front-3-height: 160px;
 
 #picture-front-3 {
   $pic-3 : front-wall-pic($picture-front-3-height, $picture-front-3-width, $picture-front-3-position);
@@ -366,8 +366,8 @@ $picture-left-6-height: 190px;
 //transform: scale3d($scale-factor, $scale-factor, $scale-factor) rotateX(-90deg) rotateY(90deg) translateZ(($main-wall-length - 2)/$scale-factor) translateY(-270px + (140px - $height)/2) translateX(-$position/$scale-factor - 0.5*$width + (200px - (200px - $width))) rotateY(180deg),
 
 /* Right wall pictures */
-$picture-right-1-position: 70px;
-$picture-right-1-width: 206px;
+$picture-right-1-position: 80px;
+$picture-right-1-width: 274px;
 $picture-right-1-height: 140px;
 
 #picture-right-1 {
@@ -385,9 +385,10 @@ $picture-right-1-height: 140px;
   transform: rotateX(-90deg) rotateY(90deg) translateZ($main-wall-length - 5px) translateY(-$shadow-height - 13px) translateX(-$picture-right-1-position - 0.5*$shadow-width);
 }
 
-$picture-right-2-position: 150px;
-$picture-right-2-width: 132px;
-$picture-right-2-height: 180px;
+$picture-right-2-position: 175px;
+$picture-right-2-width: 200px;
+$picture-right-2-height: 160px;
+
 
 #picture-right-2 {
   $pic-map : right-wall-pic($picture-right-2-height, $picture-right-2-width, $picture-right-2-position);
@@ -404,9 +405,9 @@ $picture-right-2-height: 180px;
   transform: rotateX(-90deg) rotateY(90deg) translateZ($main-wall-length - 5px) translateY(-$shadow-height - 13px) translateX(-$picture-right-2-position - 0.5*$shadow-width);
 }
 
-$picture-right-3-position: 230px;
-$picture-right-3-width: 274px;
-$picture-right-3-height: 140px;
+$picture-right-3-position: 260px;
+$picture-right-3-width: 206px;
+$picture-right-3-height: 152px;
 
 #picture-right-3 {
   $pic-map : right-wall-pic($picture-right-3-height, $picture-right-3-width, $picture-right-3-position);
@@ -423,9 +424,9 @@ $picture-right-3-height: 140px;
   transform: rotateX(-90deg) rotateY(90deg) translateZ($main-wall-length - 5px) translateY(-$shadow-height - 13px) translateX(-$picture-right-3-position - 0.5*$shadow-width);
 }
 
-$picture-right-4-position: 320px;
-$picture-right-4-width: 200px;
-$picture-right-4-height: 160px;
+$picture-right-4-position: 345px;
+$picture-right-4-width: 160px;
+$picture-right-4-height: 200px;
 
 #picture-right-4 {
   $pic-map : right-wall-pic($picture-right-4-height, $picture-right-4-width, $picture-right-4-position);
@@ -442,7 +443,7 @@ $picture-right-4-height: 160px;
   transform: rotateX(-90deg) rotateY(90deg) translateZ($main-wall-length - 5px) translateY(-$shadow-height - 13px) translateX(-$picture-right-4-position - 0.5*$shadow-width);
 }
 
-$picture-right-5-position: 410px;
+$picture-right-5-position: 430px;
 $picture-right-5-width: 200px;
 $picture-right-5-height: 160px;
 
